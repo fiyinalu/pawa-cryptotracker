@@ -1,0 +1,83 @@
+/* Global styles */
+:root {
+    --cream: #fdf6e3;
+    --blue: #0a3d62;
+    --blue-light: #3c6382;
+    --dark-bg: #0f0f0f;
+    --grid-line: rgba(0, 0, 0, 0.05);
+    --transition: 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream) url('https://www.transparenttextures.com/patterns/cubes.png'); /* subtle grid pattern */
+    background-repeat: repeat;
+    color: var(--blue);
+    transition: var(--transition);
+}
+
+/* Dark mode */
+body.dark-mode {
+    background: var(--dark-bg) url('https://www.transparenttextures.com/patterns/cubes.png');
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+/* Search and toggle button */
+input[type="text"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--blue);
+    margin-right: 10px;
+}
+
+.toggle-icon {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+    color: blue;
+}
+
+/* Crypto container */
+#crypto-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Crypto card */
+.crypto-card {
+    border: 2px solid var(--blue);
+    border-radius: 16px;
+    padding: 15px;
+    background: #fff;
+    transition: var(--transition);
+}
+
+body.dark-mode .crypto-card {
+    background: #1c1c1c;
+    border-color: var(--blue-light);
+}
+
+/* Coin logo */
+.crypto-card img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Sparkline */
+.sparkline {
+    width: 100%;
+    margin-top: 10px;
+}
